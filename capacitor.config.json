@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "quanto-guadagni",
+  "appName": "iZacClient",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

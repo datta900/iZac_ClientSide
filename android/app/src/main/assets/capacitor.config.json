@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "quanto-guadagni",
+  "appName": "iZacClient",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -9,5 +9,8 @@
       "launchShowDuration": 0
     }
   },
-  "cordova": {}
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.1.233:8100"
+  }
 }

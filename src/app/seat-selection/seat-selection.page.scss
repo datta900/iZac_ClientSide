@@ -1,0 +1,16 @@
+.container {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	padding: 25% 5%;
+	ion-row {
+		flex-grow: 1;
+		align-items: center;
+		ion-col {
+			text-align: center;
+			img:active {
+				transform: scale(0.95);
+			}
+		}
+	}
+}

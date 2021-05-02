@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-grid class="container">
+    <ion-row>
+      <ion-col>
+        <img (click)="scanQrCode()" height="100" [src]="qrImage">
+        <p> Clicca per attivare la fotocamera e inquadra il QR code</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <img (click)="enterCode()" height="100" [src]="numImage">
+        <p> Clicca per utilizzare il codice a 6 cifre</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+

@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['tabs.page.scss']
 })
 export class TabsPage {
+  hasItems = false;
 
   constructor() {}
 
+  logout() {
+    this.hasItems = !this.hasItems;
+    console.log('User logged out!');
+  }
 }

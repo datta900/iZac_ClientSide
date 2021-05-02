@@ -1,0 +1,6 @@
+ion-toolbar {
+	--min-height:100px !important;
+	&.footer {
+		--min-height: 50px !important;
+	}
+}

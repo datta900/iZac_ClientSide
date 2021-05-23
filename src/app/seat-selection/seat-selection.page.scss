@@ -1,16 +1,43 @@
 .container {
-	height: 100%;
-	display: flex;
-	flex-flow: column;
-	padding: 25% 5%;
-	ion-row {
-		flex-grow: 1;
-		align-items: center;
-		ion-col {
-			text-align: center;
-			img:active {
-				transform: scale(0.95);
-			}
-		}
-	}
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ion-row {
+    padding-bottom: 50px;
+
+    ion-col {
+      text-align: center;
+      padding: 0 15%;
+
+      img {
+        height: 100px;
+
+        &.qrCode {
+          content: url("../../assets/image/qrcode.png");
+        }
+
+        &.typeCode {
+          content: url("../../assets/image/typecode.png");
+        }
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
+}
+
+:host zxing-scanner::ng-deep {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: black;
+  justify-content: center;
+
+  video {
+    object-fit: contain;
+  }
 }

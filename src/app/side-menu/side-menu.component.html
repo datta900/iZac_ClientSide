@@ -1,27 +1,28 @@
 <ion-menu side="start" menuId="first" contentId="main" class="side-menu" swipe-gesture="false">
-  <ion-header class="ion-no-border">
-    <ion-toolbar color="primary">
-      <ion-buttons slot="start">
-        <ion-menu-button autoHide="false"><ion-icon name="arrow-back-outline"></ion-icon></ion-menu-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content color="primary" class="ion-text-center">
-    <img class="ion-padding-bottom" alt="logo" height="150" src="../../assets/icon/logo.png">
-    <div class="ion-padding-top">
-      <h3 class="ion-padding">About</h3>
-      <h3 class="ion-padding">I miei ordini</h3>
-      <h3 class="ion-padding">Impostazioni</h3>
-    </div>
-
-  </ion-content>
-  <ion-footer class="ion-no-border ion-text-center">
-    <ion-toolbar class="footer" color="primary">
-      <ion-title>Segnala un problema</ion-title>
-    </ion-toolbar>
-    <ion-toolbar class="footer ion-padding-bottom" color="primary">
-      <ion-title size="small">Termini e condizioni di utilizzo</ion-title>
-    </ion-toolbar>
-  </ion-footer>
+	<ion-header class="ion-no-border">
+		<ion-toolbar color="primary">
+			<ion-buttons slot="start">
+				<ion-menu-button autoHide="false">
+					<ion-icon name="arrow-back-outline"></ion-icon>
+				</ion-menu-button>
+			</ion-buttons>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content color="primary" class="ion-text-center">
+		<img class="ion-padding-bottom" alt="logo" height="150" src="../../assets/icon/logo.png">
+		<div class="ion-padding-top">
+			<h3 class="ion-padding">About</h3>
+			<h3 class="ion-padding" *ngIf="state.isLogged">I miei ordini</h3>
+			<h3 class="ion-padding">Impostazioni</h3>
+		</div>
+	</ion-content>
+	<ion-footer class="ion-no-border ion-text-center">
+		<ion-toolbar class="footer" color="primary">
+			<ion-title>Segnala un problema</ion-title>
+		</ion-toolbar>
+		<ion-toolbar class="footer ion-padding-bottom" color="primary">
+			<ion-title size="small">Termini e condizioni di utilizzo</ion-title>
+		</ion-toolbar>
+	</ion-footer>
 
 </ion-menu>

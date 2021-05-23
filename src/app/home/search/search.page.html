@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<ion-content>
+  <ion-row class="ion-justify-content-between ion-padding-horizontal">
+    <ion-text class="title"> {{state.restaurant.name}}</ion-text>
+    <ion-toggle [(ngModel)]="promo"> </ion-toggle>
+  </ion-row>
+  <ion-row>
+    <app-product
+            [name]="'Cosmopolitan'"
+            [description]="'Lore ipsum romanusque capocchia ecc'"
+            [price]= "10"
+            [bioFlag]="false"
+            [veganFlag]="false"
+            [glutenFreeFlag]="false"
+            [discountPerc]="0"
+            [discountPrice]="0">
+    </app-product>
+  </ion-row>
+</ion-content>

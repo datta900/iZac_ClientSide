@@ -1,3 +1,39 @@
-<ion-button full color="primary" (click)="back()">
-	Back
-</ion-button>
+<app-header></app-header>
+<ion-content>
+	<ion-row class="ion-justify-content-between ion-padding-horizontal">
+		<ion-text class="title"> {{state.restaurant.name}}</ion-text>
+		<ion-button class="btn-promo" color="promo"> <span>PROMO</span> </ion-button>
+	</ion-row>
+	<ion-searchbar class="ion-margin-bottom"></ion-searchbar>
+	<ion-row class="ion-justify-content-between ion-padding-horizontal">
+		<ion-text class="title small"> ORDINA </ion-text>
+		<label class="text-small" (click)="goToMenu()"> Vedi tutti </label>
+	</ion-row>
+	<ion-slides [options]="sliderOpts">
+		<ion-slide *ngFor="let cat of categories">
+			<ion-card class="menu-slide" (click)="goToMenu(cat.name)">
+				<img [src]="cat.image" onerror="this.onerror=null; this.src='../../assets/image/img-category-placeholder.png'" height="100%">
+				<label class="card-title"> {{cat.name | uppercase}} </label>
+			</ion-card>
+		</ion-slide>
+	</ion-slides>
+	<ion-grid class="ion-padding-horizontal">
+		<ion-row class="ion-justify-content-between ion-margin-bottom">
+			<ion-text class="title small"> CHIEDICI QUALCOSA </ion-text>
+		</ion-row>
+		<ion-row class="help">
+			<ion-col size="6">
+				<div>
+					<img class="live-chat" height="100%">
+					<label class="text-small"> IL MODO FACILE E VELOCE PER TROVARE RISPOSTE </label>
+				</div>
+			</ion-col>
+			<ion-col size="6">
+				<div>
+					<img class="chiamaci" height="100%">
+					<label class="text-small"> IL NOSTRO PERSONALE SARÀ DA TE IL PRIMA POSSIBILE </label>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

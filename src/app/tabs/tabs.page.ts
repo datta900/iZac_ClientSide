@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StateManagerService } from '../stateManager.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
   hasItems = false;
+  hideTabs = false;
 
-  constructor() {}
+  constructor(public state: StateManagerService) { }
 
   logout() {
     this.hasItems = !this.hasItems;

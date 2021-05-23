@@ -1,7 +1,7 @@
 <ion-app>
 	<app-side-menu></app-side-menu>
-	<app-header></app-header>
-	<ion-content>
-		<ion-router-outlet id="main"></ion-router-outlet>
-	</ion-content>
+	<ion-router-outlet id="main"></ion-router-outlet>
+	<ion-grid class="spinner-container" *ngIf="loaderService.isLoading$ | async">
+		<ion-spinner name="circular"></ion-spinner>
+	</ion-grid>
 </ion-app>

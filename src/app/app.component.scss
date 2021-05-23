@@ -1,0 +1,13 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width:100%;
+  background-color: black;
+  opacity: .3;
+  ion-spinner {
+    width: 9em;
+    height: 9em;
+  }
+}

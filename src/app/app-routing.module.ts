@@ -4,6 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'seat-selection',
+    pathMatch: 'full'
+  },
+  {
+    path: 'seat-selection',
     loadChildren: () => import('./seat-selection/seat-selection.module').then( m => m.SeatSelectionPageModule)
   },
   {

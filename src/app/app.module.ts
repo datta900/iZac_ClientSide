@@ -8,29 +8,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared.module';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {CoreHttpInterceptor} from './shared/http/http-interceptor.service';
 
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import { HeaderComponent } from './header/header.component';
+
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HeaderComponent,
-        SideMenuComponent
+        AppComponent
     ],
     entryComponents: [],
     imports: [
         BrowserModule,
         IonicModule.forRoot(),
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule,
+        SharedModule
     ],
     providers: [
         StatusBar,
         SplashScreen,
-        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
-    ],
-    exports: [
-        HeaderComponent
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        { provide: HTTP_INTERCEPTORS, useClass: CoreHttpInterceptor, multi: true },
     ],
     bootstrap: [AppComponent]
 })
